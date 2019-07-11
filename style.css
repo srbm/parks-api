@@ -7,8 +7,14 @@ body {
 button, input[type="text"], input[type="number"] {
   padding: 5px; }
 
-button:hover {
-  cursor: pointer; }
+input[type="submit"] {
+  padding: 6px 20px;
+  background-color: lightblue;
+  border: 2px solid lightblue;
+  box-shadow: none; }
+  input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: white; }
 
 .container {
   max-width: 600px;

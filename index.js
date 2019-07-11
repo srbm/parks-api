@@ -1,7 +1,5 @@
 'use strict';
 
-const url = `https://developer.nps.gov/api/v1/parks`;
-
 function formatStateCode(stateCode) {
     return stateCode.trim().split(/[ ,]+/).join(',');
 }
@@ -31,6 +29,7 @@ function formatParams(params) {
   }
 
 function getParks(stateCode, maxResults=10) {
+    const url = `https://developer.nps.gov/api/v1/parks`;
     const formatted = formatStateCode(stateCode);
     console.log(formatted);
     const params = {

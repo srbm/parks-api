@@ -4,29 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Github User Repos</title>
+    <title>National Park Finder</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Github User Repos</h1>
+        <h1>National Park Finder</h1>
 
         <form id="js-form">
-            <legend>Enter a username and get back a list of their repos</legend>
-            <label for="username">Username</label>
-            <input type="text" name="username" id="js-username" required />
+            <legend>Enter a state and get back a list of US National Parks</legend>
+            <label for="state">State</label>
+            <input type="text" name="state" id="js-state" required />
+
+            <label for="max-results">State</label>
+            <input type="number" name="max-results" id="js-max-results" required />
 
             <input type="submit" value="Submit">
         </form>
 
         <p id="js-error-message" class="error-message"></p>
         <section id="results" class="hidden">
-          <h2>Repo results for </h2>
+          <h2>Parks in </h2>
           <ul id="results-list">
           </ul>
         </section>
     </div>
+    <script src="keys.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
